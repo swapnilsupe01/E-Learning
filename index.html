@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swapnil's E-Learning</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Swapnil's E-Learning</h1>
+        <p class="tag">Learn. Build. Grow.</p>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#courses">Courses</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Practical courses for real developers</h2>
+          <p>Hands-on, project-based learning in web development, cloud, and more. Start small — build big.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#courses">Browse Courses</a>
+            <button class="btn ghost" id="subscribeBtn">Subscribe</button>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- Simple illustration block -->
+          <div class="illustration">
+            <svg width="260" height="160" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="252" height="120" rx="10" fill="#e9f5ff"/>
+              <rect x="18" y="28" width="100" height="12" rx="3" fill="#d0eaff"/>
+              <rect x="18" y="54" width="200" height="10" rx="3" fill="#bfe1ff"/>
+              <rect x="18" y="76" width="130" height="10" rx="3" fill="#bfe1ff"/>
+              <rect x="18" y="98" width="60" height="10" rx="3" fill="#bfe1ff"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="section">
+      <div class="container">
+        <h2>Courses</h2>
+        <p class="muted">Filter and open any course for a quick overview.</p>
+
+        <div class="filters">
+          <label>
+            <select id="levelFilter" aria-label="Filter by level">
+              <option value="all">All levels</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </label>
+          <input id="searchInput" type="search" placeholder="Search courses..." aria-label="Search courses"/>
+        </div>
+
+        <div id="coursesGrid" class="grid">
+          <!-- Cards populated in HTML for simplicity -->
+          <article class="card" data-level="beginner">
+            <h3>HTML & CSS Fundamentals</h3>
+            <p class="card-meta">Beginner • 6 lessons</p>
+            <p class="card-desc">Learn structure, layout, and responsive design to build beautiful static pages.</p>
+            <div class="card-actions">
+              <button class="btn small" data-course="HTML & CSS Fundamentals">Details</button>
+              <a class="btn small ghost" href="#contact">Enroll</a>
+            </div>
+          </article>
+
+          <article class="card" data-level="intermediate">
+            <h3>JavaScript Essentials</h3>
+            <p class="card-meta">Intermediate • 8 lessons</p>
+            <p class="card-desc">DOM manipulation, events, async programming, and small projects.</p>
+            <div class="card-actions">
+              <button class="btn small" data-course="JavaScript Essentials">Details</button>
+              <a class="btn small ghost" href="#contact">Enroll</a>
+            </div>
+          </article>
+
+          <article class="card" data-level="intermediate">
+            <h3>React & Component Design</h3>
+            <p class="card-meta">Intermediate • 10 lessons</p>
+            <p class="card-desc">Modern component-based UI design with React, props, state, and hooks.</p>
+            <div class="card-actions">
+              <button class="btn small" data-course="React & Component Design">Details</button>
+              <a class="btn small ghost" href="#contact">Enroll</a>
+            </div>
+          </article>
+
+          <article class="card" data-level="advanced">
+            <h3>Deploying on Cloud</h3>
+            <p class="card-meta">Advanced • 6 lessons</p>
+            <p class="card-desc">Learn to deploy static and dynamic apps on cloud VMs, storage, and CI/CD pipelines.</p>
+            <div class="card-actions">
+              <button class="btn small" data-course="Deploying on Cloud">Details</button>
+              <a class="btn small ghost" href="#contact">Enroll</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Nginx</span>
+          <span class="chip">Azure</span>
+          <span class="chip">Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>B.Sc. Computer Science</h3>
+            <p class="muted">XYZ College — 2022–2025</p>
+            <p>Focus: Web development, systems programming, and databases.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>HSC (12th Science)</h3>
+            <p class="muted">ABC Junior College — 2020–2022</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact & Enroll</h2>
+        <p class="muted">Have a question or want to enroll? Send a message below.</p>
+
+        <form id="contactForm" class="form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+
+          <p id="formStatus" class="muted" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Swapnil Supe • Built with HTML, CSS & JS</p>
+    </div>
+  </footer>
+
+  <!-- Course Details Modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <h3 id="modalTitle">Course title</h3>
+      <p id="modalBody">Course description...</p>
+      <div class="modal-actions">
+        <a id="modalEnroll" class="btn" href="#contact">Enroll</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
